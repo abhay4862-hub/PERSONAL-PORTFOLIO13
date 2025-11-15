@@ -1,0 +1,242 @@
+/* style.css 
+   This file controls the design of your portfolio.
+*/
+
+[span_0](start_span)/* 1. Root variables for consistent color and typography[span_0](end_span) */
+:root {
+    --primary-color: #007BFF; /* A nice blue */
+    --secondary-color: #f4f4f4; /* Light grey background */
+    --text-color: #333;
+    --header-color: #ffffff;
+    --main-font: 'Arial', sans-serif;
+}
+
+/* 2. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 3. Header and Navigation */
+header {
+    background: var(--header-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    position: fixed; /* Sticks the nav bar to the top */
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 1.5rem;
+}
+
+nav .logo a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 1.5rem;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 4. Main Sections Styling */
+main {
+    padding-top: 60px; /* Offset for the fixed header */
+}
+
+section {
+    padding: 4rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+section:nth-child(even) {
+    background: var(--secondary-color);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    [span_1](start_span)/* Add a background image for visual appeal[span_1](end_span) */
+    background: url('images/home-bg.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+#home .home-content {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* About Me Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+/* Skills Section */
+.skills-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-content h3 {
+    margin-bottom: 1rem;
+}
+
+.skills-content ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    /* Creates a responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Keeps image corners rounded */
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+
+.project-card p {
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* 5. Footer and Contact Section */
+footer#contact {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-bottom: none;
+}
+
+footer#contact h2 {
+    color: white;
+}
+a[href^="tel"] {
+    color: #4CAF50; /* light green */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a[href^="tel"]:hover {
+    color: #388E3C; /* darker green on hover */
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-links i {
+    margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
